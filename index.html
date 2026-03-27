@@ -2,68 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Adopta un compañero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adopta un héroe</title>
+
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Phaser -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1 class="fade-in">No están perdidos… están esperando por ti 🐾</h1>
-    <p class="fade-in delay">Cada segundo cuenta. Hoy puedes cambiar una vida.</p>
-    <button class="cta pulse">Quiero adoptar</button>
-  </div>
-</header>
-
-<section class="section">
-  <h2 class="reveal">¿Por qué adoptar?</h2>
-  <div class="cards">
-    <div class="card reveal">❤️ Salvas una vida</div>
-    <div class="card reveal delay">🏡 Ganas amor incondicional</div>
-    <div class="card reveal delay2">🌍 Impactas el mundo</div>
-  </div>
+<section class="hero">
+  <h1>Él solo quiere jugar contigo 🐾</h1>
+  <p>Pero hoy… está solo.</p>
 </section>
 
-<!-- MINI JUEGO -->
-<section class="game-section">
-  <h2>Llama ahora, llama ya y Encuentra tu compañero ideal</h2>
-  <p>Elige lo que más se parece a ti 👇</p>
-
-  <div class="game-container">
-    <div class="choice" onclick="selectChoice(this)">Activo 🏃</div>
-    <div class="choice" onclick="selectChoice(this)">Tranquilo 🛋️</div>
-    <div class="choice" onclick="selectChoice(this)">Familiar 👨‍👩‍👧</div>
-  </div>
-
-  <p id="result"></p>
-</section>
-
-<section class="section alt">
-  <h2 class="reveal">Historias reales</h2>
-  <div class="testimonial reveal">
-    “Adoptar fue la mejor decisión de mi vida.”
-  </div>
+<!-- JUEGO CENTRAL -->
+<section class="game-wrapper">
+  <h2>Juega con él un momento</h2>
+  <div id="game-container"></div>
+  <p id="game-message">Mantén la pelota en juego</p>
 </section>
 
 <section class="cta-section">
-  <h2>No compres. Adopta.</h2>
-  <button class="cta pulse">Adoptar ahora</button>
+  <h2>Ahora imagina esto… todos los días</h2>
+  <button class="cta">Adoptar ahora</button>
 </section>
 
 <footer>
-  <p>© 2026 Adopción Responsable</p>
+  <p>© Adopción Responsable</p>
 </footer>
 
-<script>
-function selectChoice(el) {
-  const result = document.getElementById("result");
-  result.innerText = "¡Tenemos el perro perfecto para ti! 🐶";
-  result.classList.add("show");
-}
-</script>
-
+<script src="game.js"></script>
 </body>
 </html>
